@@ -1,0 +1,31 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Copyright>Copyright (c) Fabrikam</Copyright>
+    <Company>Fabrikam</Company>
+    <Product>Farbikam Logging</Product>
+    <!--
+    <SignAssembly>true</SignAssembly>    
+    <AssemblyOriginatorKeyFile>Farbikam.snk</AssemblyOriginatorKeyFile>
+    -->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="!$(AssemblyName.EndsWith('.Tests'))">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>$(OutDir)</PackageOutputPath>
+    <Authors>$(Company)</Authors>
+    <RepositoryUrl>https://fabrikam.com/components/logging</RepositoryUrl>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <PackageLicenseUrl>$(RepositoryUrl)/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageTags>Fabrikam Logging</PackageTags>
+    <Description>$(Product)</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MicrosoftWindowsCompatibilityVersion>2.0.1</MicrosoftWindowsCompatibilityVersion>
+    <NewtonsoftJsonVersion>11.0.2</NewtonsoftJsonVersion>
+    <XunitVersion>2.4.0</XunitVersion>
+  </PropertyGroup>
+
+</Project>
